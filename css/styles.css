@@ -1,0 +1,69 @@
+* {
+  background-image: url(/img/brain.gif);
+}
+
+.backHome {
+  height: 70vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 4.6em;
+  font-family: "honk";
+}
+
+.logos {
+  padding-top: 35%;
+}
+
+.gameButtons {
+  text-decoration: none;
+  padding: 30px 55px;
+  height: 2.5em;
+  border-radius: 1.4em;
+  background-color: #f93939;
+  border: 0.4em groove white;
+  color: #fff;
+  font-size: x-large;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-image: linear-gradient(75deg, #fdc830, #f37335);
+  background-size: 300%;
+  background-position: left;
+  transition: 300ms background-position ease-in-out;
+}
+
+.gameButtons:hover {
+  background-position: right;
+}
+
+.card-body {
+  color: white;
+}
+
+.card {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 10%;
+}
+
+.card-text {
+  color: whitesmoke;
+  border: 0.2em groove white;
+  border-radius: 1em;
+  justify-content: center;
+}
+
+.card .card-title {
+  color: whitesmoke;
+}
+
+.level-nav {
+  display: flex;
+  justify-content: center;
+  color: whitesmoke;
+  font-family: "honk";
+}
