@@ -1,7 +1,7 @@
 // home page button
 const button = document.querySelector(".gamerButtons");
 
-button.addEventListener("onclick", function () {
+button.addEventListener("click", function () {
   window.location.href = "/pages/index.html";
 });
 
@@ -17,3 +17,5 @@ const saveName = () => {
 };
 
 let name = sessionStorage.getItem("contenderName");
+
+// SAVE LEVEL

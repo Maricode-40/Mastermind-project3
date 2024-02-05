@@ -63,7 +63,7 @@
 }
 
 #contenderName {
-  height: 3em;
+  height: 2.5em;
 }
 
 .level-nav {
@@ -92,4 +92,33 @@ input:focus {
 }
 a:hover {
   background-position: right;
+}
+
+.colorPage {
+  overflow-x: hidden;
+}
+
+.square {
+  width: 5em;
+  height: 6em;
+  border: 0.2em solid white;
+}
+
+.colorpicker {
+  border: 0.1em solid whitesmoke;
+}
+
+#contenderName {
+  background-color: aliceblue;
+}
+
+/*#intermediateRows,
+#beginnerRows,
+#advancedRows {
+  display: none;
+} **/
+
+.miniSquare {
+  width: 3em;
+  height: 2.5em;
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Master Mind Game</title>
+    <title>MasterMindGame</title>
   </head>
   <!-- Font Honk -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,6 +23,7 @@
   />
   <body>
     <!-- NavBar -->
+    <h1 class="level-nav">Master 🤯 Mind</h1>
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid d-flex justify-content-end m-0-p-0">
         <span class="navbar-text">
@@ -63,28 +64,31 @@
         </div>
       </div>
     </nav>
-    <!-- Receipe instructions -->
-    <div class="card" style="width: 25rem">
-      <div class="card-body">
-        <h5 class="card-title"><strong> HOW TO PLAY</strong></h5>
-        <br />
-        <h6 class="card-subtitle mb-2 text-body-secondary">
-          <strong>Predict the colors</strong>
-        </h6>
-        <p class="card-text d-flex">
-          Beginner Intermediate advanced Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Aperiam cumque dolor optio natus necessitatibus,
-          tenetur distinctio ab voluptatem illum commodi saepe quis! Corrupti
-          doloremque ut porro nisi veniam beatae assumenda?
-        </p>
-        <p class="card-text">
-          This game has been created by Isabel to know more about the project
-          click into the following link below:
-        </p>
-        <a href="https://github.com/Maricode-40" class="card-link"
-          >github.com/Maricode-40</a
-        >
-      </div>
+    <div
+      class="container-fluid p-0 m-0 backgroundGame d-flex flex-column align-items-center flex-lg-row text-light"
+    >
+      <div
+        class="row h-100 col-lg-5 p-0 m-0 d-flex flex-column align-items-center"
+      >
+       <!-- TO REMIND ABOUT LEVEL  -->
+    <div class="col h4 col-lg-10 h-25 d-flex align-items-center" id="level"> </div>
+    
+
+     <!-- To REMIND ABOUT CHOSE COLORS  -->
+     <div class="col col-lg-10 h-25 d-flex"> 
+       <!-- h4-colours  /h4 -->
+                <div class="miniSquare" id="0" onclick="addColour('0')"></div>
+                <div class="miniSquare" id="1" onclick="addColour('1')"></div>
+                <div class="miniSquare" id="2" onclick="addColour('2')"></div>
+                <div class="miniSquare" id="3" onclick="addColour('3')"></div>
+                <div class="miniSquare" id="4" onclick="addColour('4')"></div>
+                <div class="miniSquare" id="5" onclick="addColour('5')"></div>
+            </div>
+     </div>
     </div>
+
+    </div>
+
+    <script src="../js/game.js"></script>
   </body>
 </html>
