@@ -5,7 +5,7 @@
 ### General Data
 
 **- Project Designer:** Maria Isabel Rico
-**- Project Tittle:** Master Mind Game
+**- Project Tittle:** Master Mind Game.
 
 <details>
   <summary>Table of Contents </summary>

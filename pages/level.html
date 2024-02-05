@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Master Mind Game</title>
+    <title>MasterMindGame</title>
     <!-- Font Honk -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -23,6 +23,7 @@
   </head>
   <body>
     <!-- NavBar -->
+    <br />
     <h1 class="level-nav">Master 🤯 Mind</h1>
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid d-flex justify-content-end m-0-p-0">
@@ -64,18 +65,20 @@
         </div>
       </div>
     </nav>
+    <br />
+    <br />
     <div class="container-fluid d-flex flex-column">
-      <!-- Names -->
+      <!-- Enter name contender -->
       <div class="row d-flex h-50">
         <div class="col-12 col-md-4 d-flex align-items-center">
           <h2 class="ms-md-5 text-light">Enter your name:</h2>
         </div>
         <div
-          class="col-12 col-md d-flex align-items-center justify-content-start"
+          class="col-12 col-md-8 d-flex align-items-center justify-content-md-start"
         >
           <input
             type="text"
-            s
+            class="col-12 col-md-5 fs-4"
             placeholder="Contender 1"
             id="contenderName"
             maxlength="40"
@@ -83,6 +86,43 @@
         </div>
       </div>
     </div>
+    <br />
+    <br />
+    <br />
+    <!-- Level Start buttons -->
+    <div class="row row-cols-1 row-cols md-3 h-50">
+      <div class="col d-flex justify-content-center">
+        <a
+          href="./colours.html"
+          class="col-10 gamerButtons h-50"
+          onclick="saveLevelBeginner();
+           onclick= saveName()"
+        >
+          BEGINNER</a
+        >
+      </div>
+      <div class="col d-flex justify-content-center">
+        <a
+          href="./colours.html"
+          class="col-10 gamerButtons h-50"
+          onclick="saveLevelIntermediate();
+           onclick= saveName()"
+        >
+          INTERMEDIATE</a
+        >
+      </div>
+      <div class="col d-flex justify-content-center">
+        <a
+          href="./colours.html"
+          class="col-10 gamerButtons h-50"
+          onclick="saveLevelAdvanced();
+           onclick= saveName()"
+        >
+          ADVANCED</a
+        >
+      </div>
+    </div>
+
     <!-- Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
@@ -90,5 +130,6 @@
       crossorigin="anonymous"
     ></script>
     <!-- javascript -->
+    <script src="../js/main.js"></script>
   </body>
 </html>

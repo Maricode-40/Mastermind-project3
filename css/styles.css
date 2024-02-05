@@ -52,13 +52,18 @@
 
 .card-text {
   color: whitesmoke;
-  border: 0.2em groove white;
+  border: 0.3em groove white;
   border-radius: 1em;
   justify-content: center;
 }
 
 .card .card-title {
   color: whitesmoke;
+  font-size: xx-large;
+}
+
+#contenderName {
+  height: 3em;
 }
 
 .level-nav {
@@ -66,4 +71,25 @@
   justify-content: center;
   color: whitesmoke;
   font-family: "honk";
+}
+
+textarea:focus,
+input:focus {
+  color: whitesmoke;
+}
+
+.gamerButtons {
+  padding: 20px;
+  border-radius: 3em;
+  border: 0.1em groove white;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+a:hover {
+  background-position: right;
 }
