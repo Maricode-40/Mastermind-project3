@@ -1,9 +1,7 @@
-// home page button
-const button = document.querySelector(".gamerButtons");
-
-button.addEventListener("click", function () {
-  window.location.href = "/pages/index.html";
-});
+// home page button -const button = document.querySelector(".gamerButtons");
+//button.addEventListener("click", function () {
+// window.location.href = "/pages/index.html";
+//});
 
 //save the name in an special place called sessionStorage -
 const saveName = () => {
@@ -19,3 +17,72 @@ const saveName = () => {
 let name = sessionStorage.getItem("contenderName");
 
 // SAVE LEVEL
+const saveLevelBeginner = () => {
+  sessionStorage.setItem("level", "beginnerRows");
+  window.location.href = "../pages/colours.html";
+};
+
+const saveLevelIntermediate = () => {
+  sessionStorage.setItem("level", "intermediateRows");
+  window.location.href = "../pages/colours.html";
+};
+
+const saveLevelAdvanced = () => {
+  sessionStorage.setItem("level", "advancedRows");
+  window.location.href = "./pages/coulours.html";
+};
+
+// if colour = level
+window.onload = (event) => {
+  let selectedLevel = sessionStorage.getItem("level");
+  if (selectedLevel !== null && selectedLevel !== undefined) {
+    let selected = document.getElementById(selectedLevel);
+    if (selected !== null && selected !== undefined) {
+      selected.style.display = "flex";
+      myriadOfRows(selectedLevel);
+    }
+  }
+};
+
+//picking colors
+
+window.addEventListener("load", () => startup());
+
+let colorPicker = document.getElementsByClassName("colorpicker");
+let arrayColorPicker = Array.from(colorPicker);
+let objectChosenColours = {};
+let arrayChosenColours = [];
+
+// FUNCTION called startupgatter colour pickers starts any color -same  array
+
+const startup = () => {
+  arrayColorPicker.map((element) => {
+    element.value = "yellow";
+    element.addEventListener("input", (event) => updateSquare(event.element));
+    element.select();
+  });
+};
+
+//paint square into the game with the selected colors
+const updateSquare = (event, element) => {
+  let colorSquare = document.getElementById(`square${element.id}`);
+  colorSquare.style.backgroundcolor = event.target.value;
+  let color = getComputedStyle(colorSquare).backgroundColor;
+  objectChosenColours[element.id] = color;
+};
+
+//save colors in sessionStorage &
+// convert colors to text - with Json-stringify then Json parse to use it on the game
+const saveChosenColours = () => {
+  sessionStorage.setItem("chosenColours", JSON.stringify(objectChosenColours));
+  window.location.href = "./game.html";
+};
+
+let chosenColours = JSON.parse(sessionStorage.getItem("chosenColoours"));
+
+const changeColoursToArray = () => {
+  for (const property in chosenColours) {
+    arrayChosenColours.push(chosenColours[property]);
+  }
+};
+changeColoursToArray();

@@ -112,13 +112,44 @@ a:hover {
   background-color: aliceblue;
 }
 
-/*#intermediateRows,
+#intermediateRows,
 #beginnerRows,
 #advancedRows {
   display: none;
-} **/
+}
 
 .miniSquare {
   width: 3em;
   height: 2.5em;
+  margin-left: 0.3em;
+}
+
+#game {
+  padding-right: 28em;
+}
+.squareGame {
+  width: 3em;
+  height: 2.5em;
+  border: 1em solid white;
+  margin: o.3em;
+}
+
+.backgroundGame {
+  height: 30vh;
+}
+
+.letters {
+  font-size: 4.5em;
+}
+
+.circle {
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  border: 0.1em solid white;
+}
+
+#loser,
+#winner {
+  display: none;
 }
