@@ -19,12 +19,12 @@ let name = sessionStorage.getItem("contenderName");
 // SAVE LEVEL
 const saveLevelBeginner = () => {
   sessionStorage.setItem("level", "beginnerRows");
-  window.location.href = "../pages/colours.html";
+  window.location.href = "./pages/colours.html";
 };
 
 const saveLevelIntermediate = () => {
   sessionStorage.setItem("level", "intermediateRows");
-  window.location.href = "../pages/colours.html";
+  window.location.href = "./pages/colours.html";
 };
 
 const saveLevelAdvanced = () => {
@@ -33,15 +33,11 @@ const saveLevelAdvanced = () => {
 };
 
 // if colour = level
+let selectedLevel = sessionStorage.getItem("level");
+let selected = document.getElementById(selectedLevel);
+
 window.onload = (event) => {
-  let selectedLevel = sessionStorage.getItem("level");
-  if (selectedLevel !== null && selectedLevel !== undefined) {
-    let selected = document.getElementById(selectedLevel);
-    if (selected !== null && selected !== undefined) {
-      selected.style.display = "flex";
-      myriadOfRows(selectedLevel);
-    }
-  }
+  selected.style.display = "flex";
 };
 
 //picking colors
@@ -53,12 +49,12 @@ let arrayColorPicker = Array.from(colorPicker);
 let objectChosenColours = {};
 let arrayChosenColours = [];
 
-// FUNCTION called startupgatter colour pickers starts any color -same  array
+// FUNCTION called startup-gatter colour pickers starts any color -same  array
 
 const startup = () => {
   arrayColorPicker.map((element) => {
-    element.value = "yellow";
-    element.addEventListener("input", (event) => updateSquare(event.element));
+    element.value = "#FFFF00";
+    element.addEventListener("input", (event) => updateSquare(event, element));
     element.select();
   });
 };
@@ -78,7 +74,7 @@ const saveChosenColours = () => {
   window.location.href = "./game.html";
 };
 
-let chosenColours = JSON.parse(sessionStorage.getItem("chosenColoours"));
+let chosenColours = JSON.parse(sessionStorage.getItem("chosenColours"));
 
 const changeColoursToArray = () => {
   for (const property in chosenColours) {

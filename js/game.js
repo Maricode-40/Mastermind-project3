@@ -2,7 +2,6 @@
 const createRows = () => {
   let board = document.getElementById("game");
   let mainCol = document.createElement("div");
-
   mainCol.className =
     "col-12 d-flex justify-content-center justify-content-lg-start eachRow";
 
@@ -63,7 +62,7 @@ window.onload = (event) => {
   }
 };
 
-// -rows & squares ids /
+// -rows & squares IDS /
 let rows = document.getElementsByClassName("eachRow");
 let arrayRows = Array.from(rows);
 
@@ -74,8 +73,10 @@ const addIdToRows = () => {
   }
 };
 
+//variable called j to a value of 0 = Being used as a counter and track the groups squres
+//(0 means first group)**
 const addIdToSquares = () => {
-  let squares = document.getElementsByClassName("SquareGame");
+  let squares = document.getElementsByClassName("squareGame");
   let arraySquares = Array.from(squares);
 
   for (let j = 0; j < myriadOf; j++) {
@@ -110,7 +111,7 @@ const chosenLevel = () => {
   let level = document.getElementById("level");
   let p = document.createElement("p");
 
-  if (selectedLevel === "beginnerRows") {
+  if (selectedLevel == "beginnerRows") {
     p.innerHTML = "LEVEL : beginner";
     level.appendChild(p);
   } else if (selectedLevel == "intermediateRows") {
@@ -123,7 +124,7 @@ const chosenLevel = () => {
 };
 chosenLevel();
 
-//colors -to be choose
+//colors -to be choosen
 const colourMiniSquares = () => {
   for (i = 0; i < arrayChosenColours.length; i++) {
     let miniSquare = document.getElementById(`${i}`);
@@ -180,7 +181,21 @@ const removeFromArray = () => {
 //compare replies -colours
 let arrayCircles = [];
 
-const compareColours = () => {};
+const compareColours = () => {
+  if (chosenColoursInRow.length >= 4) {
+    arrayCircles = chosenColoursInRow.map((element, index) => {
+      if (element === randomAnswerArray[index]) {
+        return "rgb(255,255,0)";
+      } else if (randomAnswerArray.includes(element)) {
+        return "rgb (255,0,255)";
+      } else {
+        return "";
+      }
+    });
+    paintCircles();
+    check();
+  }
+};
 
 // draw circles
 
