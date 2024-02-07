@@ -127,7 +127,6 @@ a:hover {
 
 #game {
   border: white;
-  width: 4em;
 }
 .squareGame {
   width: 3em;
@@ -137,7 +136,7 @@ a:hover {
 }
 
 .backgroundGame {
-  height: 40vh;
+  height: 90vh;
 }
 
 .letters {
@@ -154,7 +153,4 @@ a:hover {
 #loser,
 #winner {
   display: none;
-}
-
-#game {
 }

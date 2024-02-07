@@ -28,10 +28,9 @@ const createRows = () => {
 };
 
 // -myriad of -- rows depends on the level 4 for beginner 5 for intermediate 6 for advanced//**
-
 let myriadOf = 0;
 
-const myriadOfRows = (selectedLevel) => {
+const myriadOfRows = () => {
   if (selectedLevel === "beginnerRows") {
     for (let i = 0; i < 10; i++) {
       createRows();
@@ -51,16 +50,7 @@ const myriadOfRows = (selectedLevel) => {
   return myriadOf;
 };
 
-window.onload = (event) => {
-  let selectedLevel = sessionStorage.getItem("level");
-  if (selectedLevel !== null && selectedLevel !== undefined) {
-    let selected = document.getElementById(selectedLevel);
-    if (selected !== null && selected !== undefined) {
-      selected.style.display = "flex";
-      myriadOfRows(selectedLevel);
-    }
-  }
-};
+myriadOfRows();
 
 // -rows & squares IDS /
 let rows = document.getElementsByClassName("eachRow");
@@ -134,7 +124,7 @@ const colourMiniSquares = () => {
 
 colourMiniSquares();
 
-//random array ANY
+//random array ANY-
 let randomAnswerArray = [];
 
 const correctAnswer = () => {
@@ -145,6 +135,8 @@ const correctAnswer = () => {
 };
 
 correctAnswer();
+
+//to paint squares with the guessed colours
 
 let chosenColoursInRow = [];
 
@@ -224,6 +216,6 @@ const winner = (showWinnerPage) => {
 
   if (stringArrayCircles === correctAnswer) {
     sessionStorage.setItem("result", "winner");
-    window.location.href = "./result.html";
+    window.location.href = "./results";
   }
 };
