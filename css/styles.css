@@ -126,7 +126,8 @@ a:hover {
 }
 
 #game {
-  padding-right: 28em;
+  border: white;
+  width: 4em;
 }
 .squareGame {
   width: 3em;
@@ -153,4 +154,7 @@ a:hover {
 #loser,
 #winner {
   display: none;
+}
+
+#game {
 }

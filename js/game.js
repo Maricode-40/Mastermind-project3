@@ -187,7 +187,7 @@ const compareColours = () => {
       if (element === randomAnswerArray[index]) {
         return "rgb(255,255,0)";
       } else if (randomAnswerArray.includes(element)) {
-        return "rgb (255,0,255)";
+        return "rgb(255,0,255)";
       } else {
         return "";
       }

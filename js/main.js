@@ -33,11 +33,15 @@ const saveLevelAdvanced = () => {
 };
 
 // if colour = level
-let selectedLevel = sessionStorage.getItem("level");
-let selected = document.getElementById(selectedLevel);
-
 window.onload = (event) => {
-  selected.style.display = "flex";
+  let selectedLevel = sessionStorage.getItem("level");
+  if (selectedLevel !== null && selectedLevel !== undefined) {
+    let selected = document.getElementById(selectedLevel);
+    if (selected !== null && selected !== undefined) {
+      selected.style.display = "flex";
+      myriadOfRows(selectedLevel);
+    }
+  }
 };
 
 //picking colors
