@@ -144,6 +144,7 @@ let chosenColoursInRow = [];
 const addColour = (id) => {
   let colour = arrayChosenColours[id];
   chosenColoursInRow.push(colour);
+  //console.log(chosenColoursInRow);
   paintSquares();
 };
 
@@ -161,6 +162,7 @@ const paintSquares = () => {
 };
 
 const removeFromArray = () => {
+  //console.log(chosenColoursInRow);
   index = chosenColoursInRow.length - 1;
   chosenColoursInRow.pop();
 
@@ -219,3 +221,13 @@ const winner = (showWinnerPage) => {
     window.location.href = "./results";
   }
 };
+
+document.getElementById("check").addEventListener("click", function (e) {
+  check();
+  console.log("check");
+});
+
+document.getElementById("removeButton").addEventListener("click", function (e) {
+  console.log("removeButton");
+  removeFromArray();
+});
