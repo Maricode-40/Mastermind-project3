@@ -1,4 +1,4 @@
-// home page button -const button = document.querySelector(".gamerButtons");
+//home page button -const button = document.querySelector(".gamerButtons");
 //button.addEventListener("click", function () {
 // window.location.href = "/pages/index.html";
 //});
@@ -42,7 +42,6 @@ window.onload = (event) => {
 };
 
 //picking colors
-
 window.addEventListener("load", () => startup());
 
 let colorPicker = document.getElementsByClassName("colorpicker");
@@ -72,7 +71,7 @@ const updateSquare = (event, element) => {
 // convert colors to text - with Json-stringify then Json parse to use it on the game
 const saveChosenColours = () => {
   sessionStorage.setItem("chosenColours", JSON.stringify(objectChosenColours));
-  window.location.href = "./game.html";
+  window.location.href = "./gamer.html";
 };
 
 let chosenColours = JSON.parse(sessionStorage.getItem("chosenColours"));
