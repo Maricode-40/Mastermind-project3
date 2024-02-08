@@ -11,18 +11,22 @@
 <details>
   <summary>Table of Contents </summary>
   <ol>
-  <li><a href="#objetivo-🎯">Objetive</a></li>
-  <li><a href="#sobre-el-proyecto-🔎">About the Project</a></li>
-  <li><a href="#deploy-🚀">Deploy</a></li>
-  <li><a href="#vistas">Views</a></li>
-  <li><a href="#licencia">Licence</a></li>
-  <li><a href="#contacto">Contact</a></li>
+  <li><a href="#Objective-🎯">Objetive</a></li>
+  <li><a href="#About the project-🔎">About the Project</a></li>
+  <li><a href="#Deploy-🚀">Deploy</a></li>
+  <li><a href="#Views">Views</a></li>
+  <li><a href="#Licence">Licence</a></li>
+  <li><a href="#Contact">Contact</a></li>
   </ol>
 </details>
 
-## Objetive🎯
+## Objective🎯
 
-This is a game where a code (sequence of colors) is automatically randomly selected and hidden. Then the code braker get to have some chances and guess the code colour. You can choose your level Beginner, Intermediate and Advanced. 🤯 If you fail do not worry 🤯 Try again and Lets have some fun!!
+This is a game where a code (sequence of colors) is automatically randomly selected and hidden.
+
+Then the code braker get to have some chances and guess the code colour. You can choose your level Beginner, Intermediate and Advanced.
+
+🤯 If you fail do not worry 🤯 Try again and Lets have some fun!!
 
 ## About the project-🔎
 
