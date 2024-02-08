@@ -1,11 +1,12 @@
 # GeeksHub Academy - Master Mind project
 
-<em> Welcome to MasterMind GeeksHubs Academy</em>
+<em> Welcome to Master Mind Project from GeeksHubs Academy</em>
 
 ### General Data
 
-**- Project Designer:** Maria Isabel Rico
-**- Project Tittle:** Master Mind Game.
+**- Project Designer:** Marissa Rico
+
+**- Project Tittle:** Master Mind Game 🤯 🤯
 
 <details>
   <summary>Table of Contents </summary>
@@ -21,17 +22,32 @@
 
 ## Objetive🎯
 
+This is a game where a code (sequence of colors) is automatically randomly selected and hidden. Then the code braker get to have some chances and guess the code colour. You can choose your level Beginner, Intermediate and Advanced. 🤯 If you fail do not worry 🤯 Try again and Lets have some fun!!
+
 ## About the project-🔎
+
+Start the game
+
+<img src="./img/mind1.jpeg.png">
+
+<img src="img/crash1.jpeg">
+
+Choose your colour
+
+<img src="img/mind2.png">
+
+Let´s rock!
+<img src="img/mind3.png">
 
 # Deploy 🚀 🚀
 
-<a href="#"> production URL </a>
+<a href="https://maricode-40.github.io/Mastermind-project3/index.html"> production URL </a>
 
 ## Views
 
 ## Licence
 
-This project is under licence of "My Name"
+This project is under licence of "My Name".
 
 ## Contact 👩🏽‍💻
 
