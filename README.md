@@ -32,9 +32,7 @@ Then the code braker get to have some chances and guess the code colour. You can
 
 Start the game
 
-<img src="./img/mind1.jpeg">
-
-<img src="img/crash1.jpeg">
+<img src="img/mind1.jpeg">
 
 Choose your colour
 
