@@ -1,4 +1,5 @@
-//create magic board -rows
+//creating the magic board -rows
+
 const createRows = () => {
   let board = document.getElementById("game");
   let mainCol = document.createElement("div");
@@ -31,23 +32,22 @@ const createRows = () => {
 let myriadOf = 0;
 
 const myriadOfRows = () => {
-  if (selectedLevel === "beginnerRows") {
+  if (selectedLevel == "beginnerRows") {
     for (let i = 0; i < 10; i++) {
       createRows();
     }
-    myriadOf = 10;
-  } else if (selectedLevel === "intermediateRows") {
+    return (myriadOf = 10);
+  } else if (selectedLevel == "intermediateRows") {
     for (let i = 0; i < 8; i++) {
       createRows();
     }
-    myriadOf = 8;
+    return (myriadOf = 8);
   } else {
     for (let i = 0; i < 6; i++) {
       createRows();
     }
-    myriadOf = 6;
+    return (myriadOf = 6);
   }
-  return myriadOf;
 };
 
 myriadOfRows();
@@ -59,7 +59,7 @@ let arrayRows = Array.from(rows);
 const addIdToRows = () => {
   for (let i = 0; i < arrayRows.lenght; i++) {
     let element = arrayRows[i];
-    element.id = `eachRows{1}`;
+    element.id = `eachRows{i}`;
   }
 };
 
@@ -95,7 +95,7 @@ addIdToRows();
 addIdToSquares();
 addIdToCircles();
 
-/// -chosen level
+/// -chosen level - reminder
 
 const chosenLevel = () => {
   let level = document.getElementById("level");
@@ -124,7 +124,7 @@ const colourMiniSquares = () => {
 
 colourMiniSquares();
 
-//random array ANY-
+//random array - random answer
 let randomAnswerArray = [];
 
 const correctAnswer = () => {
@@ -179,13 +179,14 @@ const compareColours = () => {
   if (chosenColoursInRow.length >= 4) {
     arrayCircles = chosenColoursInRow.map((element, index) => {
       if (element === randomAnswerArray[index]) {
-        return "rgb(255,255,0)";
+        return "rgb(138, 43, 226)";
       } else if (randomAnswerArray.includes(element)) {
-        return "rgb(255,0,255)";
+        return "rgb(255, 255, 255)";
       } else {
         return "";
       }
     });
+
     paintCircles();
     check();
   }
@@ -224,10 +225,10 @@ const winner = (showWinnerPage) => {
 
 document.getElementById("check").addEventListener("click", function (e) {
   check();
-  console.log("check");
+  //console.log("check");
 });
 
 document.getElementById("removeButton").addEventListener("click", function (e) {
-  console.log("removeButton");
-  removeFromArray();
+  console.log("removeFromArray");
+  //removeFromArray();
 });

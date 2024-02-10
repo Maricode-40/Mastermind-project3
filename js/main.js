@@ -3,7 +3,7 @@
 // window.location.href = "/pages/index.html";
 //});
 
-//save the name in an special place called sessionStorage -
+//get  name in from an special place called sessionStorage
 const saveName = () => {
   let name = document.getElementById("contenderName").value;
 
@@ -41,7 +41,7 @@ window.onload = (event) => {
   selected.style.display = "flex";
 };
 
-//picking colors
+//picking colors -
 window.addEventListener("load", () => startup());
 
 let colorPicker = document.getElementsByClassName("colorpicker");
@@ -53,7 +53,7 @@ let arrayChosenColours = [];
 
 const startup = () => {
   arrayColorPicker.map((element) => {
-    element.value = "#FFFF00";
+    element.value = "#8a2be2";
     element.addEventListener("input", (event) => updateSquare(event, element));
     element.select();
   });
@@ -67,7 +67,9 @@ const updateSquare = (event, element) => {
   objectChosenColours[element.id] = color;
 };
 
-//save colors in sessionStorage &
+// converts a JavaScript value (colors chosen colours (box selection) from selected page/colors.html
+//to gamer.html and cconvert to  JSON string.
+
 // convert colors to text - with Json-stringify then Json parse to use it on the game
 const saveChosenColours = () => {
   sessionStorage.setItem("chosenColours", JSON.stringify(objectChosenColours));
@@ -82,3 +84,5 @@ const changeColoursToArray = () => {
   }
 };
 changeColoursToArray();
+
+//save colors in sessionStorage through static method
