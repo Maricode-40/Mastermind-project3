@@ -44,7 +44,7 @@ window.onload = (event) => {
 //picking colors -
 window.addEventListener("load", () => startup());
 
-let colorPicker = document.getElementsByClassName("colorpicker");
+let colorPicker = document.getElementsByName("colorpicker");
 let arrayColorPicker = Array.from(colorPicker);
 let objectChosenColours = {};
 let arrayChosenColours = [];
@@ -63,7 +63,8 @@ const startup = () => {
 const updateSquare = (event, element) => {
   let colorSquare = document.getElementById(`square${element.id}`);
   colorSquare.style.backgroundcolor = event.target.value;
-  let color = getComputedStyle(colorSquare).backgroundColor;
+  let color = event.target.value;
+
   objectChosenColours[element.id] = color;
 };
 

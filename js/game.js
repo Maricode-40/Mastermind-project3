@@ -183,12 +183,12 @@ const compareColours = () => {
       } else if (randomAnswerArray.includes(element)) {
         return "rgb(255, 255, 255)";
       } else {
-        return "";
+        return "rgb(255,0,0)";
       }
     });
 
     paintCircles();
-    check();
+    //check();
   }
 };
 
@@ -203,7 +203,10 @@ const paintCircles = () => {
 };
 
 const check = (showWinnerPage) => {
+  //console.log(myriadOf);
   if (j < myriadOf - 1) {
+    compareColours();
+    winner();
     j++;
     chosenColoursInRow.length = "";
   } else {
@@ -214,8 +217,7 @@ const check = (showWinnerPage) => {
 
 const winner = (showWinnerPage) => {
   let stringArrayCircles = arrayCircles.toString();
-  let correctAnswer =
-    "rgb(255, 255, 0),rgb(255, 255, 0),rgb(255, 255, 0),rgb(255, 255, 0)";
+  let correctAnswer = randomAnswerArray;
 
   if (stringArrayCircles === correctAnswer) {
     sessionStorage.setItem("result", "winner");
@@ -225,10 +227,10 @@ const winner = (showWinnerPage) => {
 
 document.getElementById("check").addEventListener("click", function (e) {
   check();
-  //console.log("check");
+  console.log("check");
 });
 
 document.getElementById("removeButton").addEventListener("click", function (e) {
-  console.log("removeFromArray");
-  //removeFromArray();
+  //console.log("removeFromArray");
+  removeFromArray();
 });

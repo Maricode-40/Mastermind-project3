@@ -1,4 +1,8 @@
-* {
+body {
+  background-image: url(../img/brain.gif);
+}
+
+.navbar {
   background-image: url(../img/brain.gif);
 }
 
@@ -131,7 +135,7 @@ a:hover {
 .squareGame {
   width: 3em;
   height: 2.5em;
-  border: 1em solid white;
+  background-color: white;
   margin: 0.3em;
 }
 
