@@ -44,7 +44,7 @@ body {
 }
 
 .card-body {
-  color: white;
+  color: aqua;
 }
 
 .card {
@@ -55,14 +55,14 @@ body {
 }
 
 .card-text {
-  color: whitesmoke;
+  color: black;
   border: 0.3em groove white;
   border-radius: 1em;
   justify-content: center;
 }
 
 .card .card-title {
-  color: whitesmoke;
+  color: black;
   font-size: xx-large;
 }
 
