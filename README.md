@@ -30,6 +30,10 @@ Then the code braker get to have some chances and guess the code colour. You can
 
 ## About the project-🔎
 
+A Multi-Page Application (MPAs). The project is created with Bootstrap 5.3 Framework , html5 , CSS3, Javascript Vanilla and Flexbox.
+
+## Views
+
 Start the game
 
 <img src="img/mind1.jpeg">
@@ -44,8 +48,6 @@ Let´s rock!
 # Deploy 🚀 🚀
 
 <a href="https://maricode-40.github.io/Mastermind-project3/index.html"> production URL </a>
-
-## Views
 
 ## Licence
 

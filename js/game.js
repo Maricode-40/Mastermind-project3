@@ -162,7 +162,6 @@ const paintSquares = () => {
 };
 
 const removeFromArray = () => {
-  //console.log(chosenColoursInRow);
   index = chosenColoursInRow.length - 1;
   chosenColoursInRow.pop();
 
@@ -188,7 +187,6 @@ const compareColours = () => {
     });
 
     paintCircles();
-    //check();
   }
 };
 
@@ -227,7 +225,7 @@ const winner = (showWinnerPage) => {
 
 document.getElementById("check").addEventListener("click", function (e) {
   check();
-  console.log("check");
+  //console.log("check");
 });
 
 document.getElementById("removeButton").addEventListener("click", function (e) {
