@@ -6,9 +6,8 @@ const winnerName = () => {
     .toUpperCase()} MASTER PLAYER!!`;
 
   let nameLoser = document.getElementById("nameLoser");
-  nameLoser.innerHTML = `${sessionStorage
-    .getItem("name")
-    .toUpperCase()}  DO NOT WORRY & TRY AGAIN!! `;
+  nameLoser.innerHTML = `${sessionStorage.getItem("name").toUpperCase()}  ,
+    DO NOT WORRY & TRY AGAIN!! `;
 };
 
 // messages

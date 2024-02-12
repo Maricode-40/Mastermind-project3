@@ -43,8 +43,8 @@ body {
   background-position: right;
 }
 
-.card-body {
-  color: aqua;
+.card-text {
+  background-color: rgba(134, 64, 184, 0.843);
 }
 
 .card {
@@ -52,6 +52,7 @@ body {
   display: flex;
   justify-content: center;
   padding-top: 10%;
+  padding-left: 1em;
 }
 
 .card-text {
