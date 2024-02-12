@@ -1,4 +1,6 @@
-//creating the magic board -rows
+/**
+ * creating the maig board-rows
+ */
 
 const createRows = () => {
   let board = document.getElementById("game");
@@ -28,7 +30,10 @@ const createRows = () => {
   board.appendChild(mainCol);
 };
 
-// -myriad of -- rows depends on the level 4 for beginner 5 for intermediate 6 for advanced//**
+/**
+ * myriad of rows is How may depends the level
+ */
+
 let myriadOf = 0;
 
 const myriadOfRows = () => {
@@ -52,7 +57,6 @@ const myriadOfRows = () => {
 
 myriadOfRows();
 
-// -rows & squares IDS /
 let rows = document.getElementsByClassName("eachRow");
 let arrayRows = Array.from(rows);
 
@@ -63,8 +67,6 @@ const addIdToRows = () => {
   }
 };
 
-//variable called j to a value of 0 = Being used as a counter and track the groups squres
-//(0 means first group)**
 const addIdToSquares = () => {
   let squares = document.getElementsByClassName("squareGame");
   let arraySquares = Array.from(squares);
@@ -95,8 +97,6 @@ addIdToRows();
 addIdToSquares();
 addIdToCircles();
 
-/// -chosen level - reminder
-
 const chosenLevel = () => {
   let level = document.getElementById("level");
   let p = document.createElement("p");
@@ -114,7 +114,6 @@ const chosenLevel = () => {
 };
 chosenLevel();
 
-//colors -to be choosen
 const colourMiniSquares = () => {
   for (i = 0; i < arrayChosenColours.length; i++) {
     let miniSquare = document.getElementById(`${i}`);
@@ -124,7 +123,6 @@ const colourMiniSquares = () => {
 
 colourMiniSquares();
 
-//random array - random answer
 let randomAnswerArray = [];
 
 const correctAnswer = () => {
@@ -136,19 +134,14 @@ const correctAnswer = () => {
 
 correctAnswer();
 
-//to paint squares with the guessed colours
-
 let chosenColoursInRow = [];
 
-//click mini sqaure add array colour
 const addColour = (id) => {
   let colour = arrayChosenColours[id];
   chosenColoursInRow.push(colour);
   //console.log(chosenColoursInRow);
   paintSquares();
 };
-
-// paint the squares using the index of the array
 
 let j = 0;
 let squareIwantToPaint;
@@ -171,7 +164,9 @@ const removeFromArray = () => {
   }
 };
 
-//compare replies -colours
+/**
+ * comprare replies with color
+ */
 let arrayCircles = [];
 
 const compareColours = () => {
@@ -190,8 +185,6 @@ const compareColours = () => {
   }
 };
 
-// draw circles
-
 const paintCircles = () => {
   for (let i = 0; i < 4; i++) {
     let circleIwantToPaint = document.getElementById(`row${j}-circle${i}`);
@@ -201,7 +194,6 @@ const paintCircles = () => {
 };
 
 const check = (showWinnerPage) => {
-  //console.log(myriadOf);
   if (j < myriadOf - 1) {
     compareColours();
     winner();
@@ -225,10 +217,8 @@ const winner = (showWinnerPage) => {
 
 document.getElementById("check").addEventListener("click", function (e) {
   check();
-  //console.log("check");
 });
 
 document.getElementById("removeButton").addEventListener("click", function (e) {
-  //console.log("removeFromArray");
   removeFromArray();
 });

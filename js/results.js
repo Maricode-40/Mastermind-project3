@@ -1,4 +1,3 @@
-// players name
 const winnerName = () => {
   let nameWinner = document.getElementById("nameWinner");
   nameWinner.innerHTML = `${sessionStorage
@@ -10,7 +9,10 @@ const winnerName = () => {
     DO NOT WORRY & TRY AGAIN!! `;
 };
 
-// messages
+/**
+ * winner pages
+ */
+
 const showWinnerPage = () => {
   let result = sessionStorage.getItem("result");
   let resultPage = document.getElementById(result);

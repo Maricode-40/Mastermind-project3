@@ -1,9 +1,6 @@
-//home page button -const button = document.querySelector(".gamerButtons");
-//button.addEventListener("click", function () {
-// window.location.href = "/pages/index.html";
-//});
-
-//get  name in from an special place called sessionStorage
+/**
+ * get  name in from an special place called sessionStorage
+ */
 const saveName = () => {
   let name = document.getElementById("contenderName").value;
 
@@ -16,7 +13,9 @@ const saveName = () => {
 
 let name = sessionStorage.getItem("contenderName");
 
-// SAVE LEVEL
+/**
+ * To Save Level
+ */
 const saveLevelBeginner = () => {
   sessionStorage.setItem("level", "beginnerRows");
   window.location.href = "./pages/colours.html";
@@ -32,7 +31,9 @@ const saveLevelAdvanced = () => {
   window.location.href = "./pages/coulours.html";
 };
 
-// if colour = level
+/**
+ * objective- code
+ */
 
 let selectedLevel = sessionStorage.getItem("level");
 let selected = document.getElementById(selectedLevel);
@@ -41,7 +42,10 @@ window.onload = (event) => {
   selected.style.display = "flex";
 };
 
-//picking colors -
+/**
+ * picking colours
+ */
+
 window.addEventListener("load", () => startup());
 
 let colorPicker = document.getElementsByName("colorpicker");
@@ -49,7 +53,9 @@ let arrayColorPicker = Array.from(colorPicker);
 let objectChosenColours = {};
 let arrayChosenColours = [];
 
-// FUNCTION called startup-gatter colour pickers starts any color -same  array
+/**
+ * this function startup gatter colour pickers that starts any color - same array
+ */
 
 const startup = () => {
   arrayColorPicker.map((element) => {
@@ -59,7 +65,10 @@ const startup = () => {
   });
 };
 
-//paint square into the game with the selected colors
+/**
+ * this function paint squares into the game with the selected colors
+ */
+
 const updateSquare = (event, element) => {
   let colorSquare = document.getElementById(`square${element.id}`);
   colorSquare.style.backgroundcolor = event.target.value;
@@ -68,10 +77,11 @@ const updateSquare = (event, element) => {
   objectChosenColours[element.id] = color;
 };
 
-// converts a JavaScript value (colors chosen colours (box selection) from selected page/colors.html
-//to gamer.html and cconvert to  JSON string.
+/**
+ * converts a JavaScript value (colors chosen colours (box selection) from selected page/colors.html to gamer.html
+ * and cconvert to  JSON string. convert colors to text - with Json-stringify then Json parse to use it on the game.
+ */
 
-// convert colors to text - with Json-stringify then Json parse to use it on the game
 const saveChosenColours = () => {
   sessionStorage.setItem("chosenColours", JSON.stringify(objectChosenColours));
   window.location.href = "./gamer.html";
@@ -86,4 +96,6 @@ const changeColoursToArray = () => {
 };
 changeColoursToArray();
 
-//save colors in sessionStorage through static method
+/**
+ * saving colors in sessionStorage through an static method
+ */
